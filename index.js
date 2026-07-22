@@ -366,6 +366,21 @@ document.addEventListener("DOMContentLoaded",()=>{
 
     });
 
+
+    /* Renews Mail */
+    box.querySelectorAll(".renews-mail").forEach(el=>{
+
+      let value = el.dataset[cycle];
+
+      if(!value){
+        return;
+      }
+
+      el.innerHTML = value;
+
+    });
+
+
     /* Save */
     box.querySelectorAll(".save").forEach(el=>{
 
