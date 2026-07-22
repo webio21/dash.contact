@@ -179,16 +179,11 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    let closest = null;
-    let minDistance = Infinity;
-
+    let closest = first.id;
     sections.forEach(sec => {
-      const distance = Math.abs(scrollTop - sec.offsetTop);
-
-      if (distance < minDistance) {
-        minDistance = distance;
-        closest = sec.id;
-      }
+        if (scrollTop >= sec.offsetTop) {
+            closest = sec.id;
+        }
     });
 
     const desktopLink = navCenter?.querySelector(
