@@ -1,9 +1,9 @@
 :root{
   --text:#555555;
-  --muted:#777777;
+  --muted:#777;
   --border:#eeeeee;
   --border-light:#f2f2f2;
-  --bg:#ffffff;
+  --bg:#fff;
   --bg-soft:#fafafa;
 }
 
@@ -82,20 +82,201 @@ h4{
   color:#fffffff5;
 }
 
-.hero-stop {
-  display: flex;
-  justify-content: center;
-  margin-top: -32px;
-  margin-bottom: -4px;
+.hero-stop{
+    width:800px;
+    max-width:100%;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    margin-top:-32px;
+    margin-bottom:-4px;
+    margin-left:auto;
+    margin-right:auto;
 }
 
-.hero-stop img {
-  width: min(800px, 70vw);
-  height: auto;
-  max-height: 200px;
-  object-fit: contain;
-  user-select: none;
-  -webkit-user-drag: none;
+.hero-stop-bg{
+    width:800px;
+    width:min(800px,100%);
+    max-height:200px;
+    max-width:100%;
+    height:auto;
+    object-fit:contain;
+    display:block;
+    user-select:none;
+    -webkit-user-drag:none;
+}
+
+.hero-cloud{
+    position:absolute;
+    width:130px;
+    height:auto;
+    left:55%;
+    top:22%;
+    transform:translateX(-50%);
+    pointer-events:none;
+    user-select:none;
+    -webkit-user-drag:none;
+    z-index:2;
+}
+
+.hero-balloon,
+.hero-boat{
+    position:absolute;
+    pointer-events:none;
+    user-select:none;
+    -webkit-user-drag:none;
+    transform-origin:center;
+}
+
+.hero-balloon{
+    width:32px;
+    left:50.7%;
+    top:20.5%;
+    animation:balloonFly 18s ease-in-out infinite alternate;
+    animation:balloonSwing 3s ease-in-out infinite;
+    transform-origin:center bottom;
+}
+
+.hero-boat{
+    width:20px;
+    left:54%;
+    top:57%;
+    animation:boatFloat 12s ease-in-out infinite alternate;
+}
+
+.hero-balloon-wrap{
+    position:absolute;
+    left:50.7%;
+    top:20.5%;
+    animation:balloonFly 18s ease-in-out infinite alternate;
+}
+
+@keyframes balloonFly{
+
+    0%{
+        transform:
+            translate(-70px,22px)
+            scale(.86);
+    }
+
+    25%{
+        transform:
+            translate(-35px,4px)
+            scale(1);
+    }
+
+    50%{
+        transform:
+            translate(0,-8px)
+            scale(1.18);
+    }
+
+    75%{
+        transform:
+            translate(35px,10px)
+            scale(1);
+    }
+
+    100%{
+        transform:
+            translate(70px,38px)
+            scale(.86);
+    }
+
+}
+
+@keyframes balloonSwing{
+
+    0%{
+        transform:rotate(-3deg);
+    }
+
+    25%{
+        transform:rotate(2deg);
+    }
+
+    50%{
+        transform:rotate(-2deg);
+    }
+
+    75%{
+        transform:rotate(3deg);
+    }
+
+    100%{
+        transform:rotate(-3deg);
+    }
+
+}
+
+@keyframes boatFloat{
+
+    0%{
+        transform:
+            translate(14px,0)
+            rotate(-6deg);
+    }
+
+    10%{
+        transform:
+            translate(10px,-2px)
+            rotate(3deg);
+    }
+
+    20%{
+        transform:
+            translate(6px,2px)
+            rotate(-4deg);
+    }
+
+    30%{
+        transform:
+            translate(0,-2px)
+            rotate(4deg);
+    }
+
+    40%{
+        transform:
+            translate(-6px,2px)
+            rotate(-3deg);
+    }
+
+    50%{
+        transform:
+            translate(-10px,-1px)
+            rotate(3deg);
+    }
+
+    60%{
+        transform:
+            translate(-14px,0)
+            rotate(-2deg);
+    }
+
+    66%{
+        transform:
+            translate(-14px,-2px)
+            rotate(2deg);
+    }
+
+    72%{
+        transform:
+            translate(-14px,2px)
+            rotate(-2deg);
+    }
+
+    84%{
+        transform:
+            translate(-6px,-1px)
+            rotate(3deg);
+    }
+
+    100%{
+        transform:
+            translate(14px,0)
+            rotate(-6deg);
+    }
+
 }
 
 h1{
@@ -219,6 +400,41 @@ tbody tr:hover td{
     justify-content:center;
 }
 
+.hot1{
+    animation: hotFade 8s infinite ease-in-out;
+}
+
+.hot2{
+    opacity:0;
+    animation: hotFade2 8s infinite ease-in-out;
+    animation-delay:2s;
+}
+
+@keyframes hotFade2{
+    0%,25%{
+        opacity:0;
+    }
+
+    50%{
+        opacity:1;
+    }
+
+    75%,100%{
+        opacity:0;
+    }
+}
+
+.th-hot{
+    width:clamp(50px,40vw,100px);
+    height:auto;
+    margin-top:-195px;
+    margin-left:165px;
+    position:absolute;
+    user-select: none;
+    -webkit-user-drag: none;
+    z-index:1000;
+}
+
 .th-icon{
     width:clamp(100px,80vw,200px);
     height:auto;
@@ -232,7 +448,7 @@ tbody tr:hover td{
 .th-title{
     font-size:34px;
     font-weight:800;
-    color:#111827;
+    color:#111;
     line-height:1.1;
     letter-spacing:-0.02em;
     margin-top:80px;
@@ -240,7 +456,7 @@ tbody tr:hover td{
 
 .th-subtitle{
     font-size:14px;
-    color:#6b7280;
+    color:#777;
     font-weight:500;
 }
 
@@ -248,7 +464,7 @@ tbody tr:hover td{
  display:flex;
  justify-content:center;
  margin:0 auto;
- background:#ffffff;
+ background:#fff;
  border-radius:999px;
  width:max-content;
  height:50px;
@@ -266,23 +482,31 @@ tbody tr:hover td{
   width:clamp(60px, 12vw, 100px);
   max-width:100%;
   cursor:pointer;
-  color:#777;
+  color:#aaa;
 }
 
 .billing-toggle button:hover{
-  color:#000000;
+  color:#555;
 }
 
 .billing-toggle button.active{
-  color:#fff;
-  background:#000;
+  color:#555;
+  background:#fff;
   box-shadow:0 6px 12px rgba(0, 0, 0, 0.15);
+  border:1px solid #555;
 }
 
 @media (max-width:576px){
 .th-header{
     min-width:80px;
     padding:0 8px;
+}
+
+.th-hot{
+    width:clamp(25px,20vw,50px);
+    height:auto;
+    margin-top:-150px;
+    margin-left:80px;
 }
 
 .th-icon{
@@ -383,8 +607,8 @@ thead .premium{
 }
 
 .badge-free{
-  border:1px solid #aaaaaa;
-  color:#aaaaaa;
+  border:1px solid #aaa;
+  color:#aaa;
 }
 
 .badge-premium{
@@ -415,28 +639,28 @@ th.personal{
 
 .monthly .decimal{
   font-size:14px;
-  color:#777777;
+  color:#777;
 }
 
 .yearly{
   font-size:14px;
-  color:#777777;
+  color:#777;
 }
 
 .period{
   font-size:14px;
-  color:#777777;
+  color:#777;
 }
 
 .renews{
   font-size:12px;
-  color:#999999;
+  color:#999;
   font-weight: 300;
 }
 
 .renews-mail{
   font-size:11px;
-  color:#999999;
+  color:#999;
   font-weight: 300;
 }
 
@@ -454,7 +678,7 @@ th.free .monthly{
 
 th.free .yearly{
   font-size:12px;
-  color:#aaaaaa;
+  color:#aaa;
   margin-top:2px;
 }
 
@@ -475,17 +699,16 @@ th.free .yearly{
 }
 
 .btn-free{
-  color:#999999;
-  background:#ffffff;
+  color:#aaa;
+  background:#fff;
   font-size:12px;
-  border:1px solid #dddddd;
+  border:1px solid #aaa;
   box-sizing: border-box;
 }
 
 .btn-free:hover{
-  color:#777777;
-  background:#FAFAFA;
-  border:1px solid #cccccc;
+  color:#555;
+  border:1px solid #555;
   box-shadow:0 4px 8px rgba(0,0,0,.06);
 }
 
@@ -507,13 +730,13 @@ th.free .yearly{
 }
 
 .btn-premium:hover{
-  background:#9539ff;
+  background:#725fff;
   box-shadow:0 4px 8px rgba(119,0,255,.25);
 }
 
 .btn-hero{
   width: 75%;
-  color:#000000;
+  color:#000;
   background:#fff;
   box-shadow:0 6px 12px rgba(255, 255, 255, 0.25);
   font-weight:400;
@@ -523,7 +746,7 @@ th.free .yearly{
 
 .btn-hero:hover{
   color:#fff;
-  background:#000000;
+  background:#000;
   box-shadow:0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
@@ -650,15 +873,16 @@ th.free .yearly{
 
 .nav-link {
   display: flex;
+  flex: 1 1 0;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   flex: 0 0 auto;
-  height: 100%;
   min-width: 90px;
+  height: 100%;
   padding: 6px 22px;
   text-decoration: none;
-  color: #000000;
+  color: #000;
   font-size: 9pt;
   font-weight: 300;
   transition: all .25s ease;
@@ -732,6 +956,7 @@ th.free .yearly{
 
 @media (max-width: 1200px) {
   .nav-link {
+    flex: 1 1 0;
     padding: 6px 18px;
     min-width: 75px;
     flex: 0 0 auto;
@@ -740,6 +965,7 @@ th.free .yearly{
 
 @media (max-width: 1100px) {
   .nav-link {
+    flex: 1 1 0;
     padding: 6px 14px;
     min-width: 60px;
   }
@@ -747,6 +973,7 @@ th.free .yearly{
 
 @media (max-width: 1024px) {
   .nav-link {
+    flex: 1 1 0;
     padding: 6px 10px;
     min-width: 45px;
   }
@@ -754,6 +981,7 @@ th.free .yearly{
 
 @media (max-width: 900px) {
   .nav-center {
+    flex: 1 1 0;
     opacity: 0;
     pointer-events: none;
   }
@@ -807,14 +1035,14 @@ th.free .yearly{
 }
 
 #mobile-menu .nav-link.active {
-  color: #111111;
+  color: #000;
 }
 
 #mobile-menu .nav-link:hover {
   background: linear-gradient(
-    to right,
-    rgba(0,0,0,0.04),
-    rgba(0,0,0,0.02)
+    to bottom,
+    rgba(0, 0, 0, .01),
+    rgba(0, 0, 0, .02)
   );
 }
 
@@ -843,7 +1071,7 @@ th.free .yearly{
 
 .lang-wrapper {
   font-size: 10.5pt;
-  color: #ffffff;
+  color: #fff;
   position: relative;
   display: inline-block;
   top: -9px;
@@ -873,8 +1101,8 @@ th.free .yearly{
 
 #lang-dropdown {
   display: none;
-  color: #999999;
-  background: #ffffff;
+  color: #999;
+  background: #fff;
   border-radius: 16px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   position: absolute;
@@ -1005,9 +1233,9 @@ font-size: 11pt;
 text-decoration: none;
 }
 
-.btn-a { background: #ffffff; color: #999999; border:1px solid #dddddd;}
-.btn-b { background: #00d2ff; color: #ffffff; }
-.btn-a:hover { background: #FAFAFA; color:#777777; border:1px solid #cccccc;}
+.btn-a { background: #fff; color: #aaa; border:1px solid #aaa;}
+.btn-b { background: #00d2ff; color: #fff; }
+.btn-a:hover { color:#555; border:1px solid #555;}
 .btn-b:hover { background: #52dfff; }
 
 .divider{
@@ -1037,7 +1265,7 @@ text-decoration: none;
 }
 
 .footer-links a{
-    color:#ffffff;
+    color:#fff;
     text-decoration:none;
     font-size:10.5pt;
     transition:.2s;
