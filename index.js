@@ -362,8 +362,8 @@ document.addEventListener("DOMContentLoaded",()=>{
     });
 
 
-    /* Renews Mail */
-    box.querySelectorAll(".renews-mail").forEach(el=>{
+    /* Note */
+    box.querySelectorAll(".note").forEach(el=>{
 
       let value = el.dataset[cycle];
 
