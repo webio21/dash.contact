@@ -670,7 +670,6 @@ th.personal{
         display:none;
     }
 
-
     .badge{
         padding:4px 8px;
         font-size:11px;
@@ -679,7 +678,7 @@ th.personal{
 
     .popular-tag,
     .value-tag{
-        font-size:9px !important;
+        font-size:8px !important;
         padding:2px 0;
     }
 
