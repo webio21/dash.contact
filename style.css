@@ -599,15 +599,15 @@ th.personal{
     }
 
     .hero-title span:nth-child(1){
-        font-size:46px;
+        font-size:50px;
     }
 
     .hero-title span:nth-child(2){
-        font-size:38px;
+        font-size:42px;
     }
 
     .hero-title span:nth-child(3){
-        font-size:32px;
+        font-size:36px;
     }
 
     .table-wrapper{
