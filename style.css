@@ -44,10 +44,8 @@ h4{
   align-items:center;
   line-height:0.95;
   margin:60px 0 24px;
-
   font-weight:700;
   letter-spacing:-0.05em;
-
   background:linear-gradient(
     180deg,
     #003b49 0%,
@@ -594,6 +592,25 @@ th.personal{
 
 @media (max-width:576px) {
 
+    .nav-btn{
+        width:46px;
+        height:46px;
+        font-size:12px !important;
+        padding:0 2px !important;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        box-sizing:border-box;
+    }
+
+    .nav-right{
+        gap:8px !important;
+    }
+
+    #hamburger{
+        width:16px !important;
+        margin-left:2px !important;
+    }
     .hero-title{
         width:100%;
     }
@@ -682,7 +699,6 @@ th.personal{
         padding:2px 0;
     }
 
-
     .mailbox-selector{
         width:80px;
         max-width:80px;
@@ -708,7 +724,6 @@ th.personal{
     .btn{
         font-size:12px !important;
     }
-
 
     .price{
         font-size:9px !important;
@@ -1347,7 +1362,8 @@ display: flex;
   cursor: pointer;
   width: 20px;
   gap: 4px;
-  margin-left: 4px;
+  margin-left: 2px;
+  margin-right: -4px;
 }
 
 #hamburger span {
@@ -1383,10 +1399,8 @@ display: flex;
   top: 58px;
   left: 0;
   right: 0;
-
   display: none;
   flex-direction: column;
-
   width: 100%;
   background: white;
   z-index: 9998;
@@ -1400,9 +1414,9 @@ display: flex;
 }
 
 .nav-right .nav-btn {
-padding: 8px 24px;
-font-size: 11pt;
-text-decoration: none;
+  padding: 8px 24px;
+  font-size: 11pt;
+  text-decoration: none;
 }
 
 .btn-a { background: #fff; color: #aaa; border:1px solid #aaa;}
