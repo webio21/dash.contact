@@ -610,6 +610,7 @@ th.personal{
     #hamburger{
         width:16px !important;
         margin-left:2px !important;
+        margin-right:-8px !important;
     }
     .hero-title{
         width:100%;
