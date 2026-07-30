@@ -277,13 +277,25 @@ h4{
 }
 
 h1{
-  color:#fffffff5;
-  text-align:center;
-  font-size:52px;
-  font-weight:700;
-  letter-spacing:-0.03em;
-  margin-top:60px;
-  margin-bottom:8px;
+    position:relative;
+    color:#fffffff5;
+    text-align:center;
+    font-size:52px;
+    font-weight:700;
+    letter-spacing:-0.03em;
+    margin-top:60px;
+    margin-bottom:8px;
+}
+
+.h1-icon{
+    position:absolute;
+    margin-top:32px;
+    margin-left:5px;
+    transform:translate(calc(-100% - 16px), -50%);
+    width:46px;
+    height:46px;
+    user-select:none;
+    -webkit-user-drag:none;
 }
 
 h2{
@@ -591,6 +603,17 @@ th.personal{
 }
 
 @media (max-width:576px) {
+
+    h1{
+        font-size:46px;
+    }
+
+    .h1-icon{
+        margin-top:28px;
+        width:42px;
+        height:42px;
+        transform:translate(calc(-100% - 10px), -50%);
+    }
 
     .nav-btn{
         width:46px;
