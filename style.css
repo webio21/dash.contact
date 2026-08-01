@@ -1502,10 +1502,11 @@ display: flex;
 .copyright-text{
     color:rgba(255,255,255,.85);
     font-size:12px;
-    margin-bottom:4px;
+    margin-bottom:2px;
 }
 
 .copyright-subtext{
     color:rgba(255,255,255,.65);
     font-size:12px;
+    line-height:1.5;
 }
