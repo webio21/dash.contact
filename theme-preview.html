@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Theme Preview</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:flex;justify-content:center;align-items:center;font-family:Inter,system-ui,sans-serif;color:#1f2937;background:linear-gradient(180deg,#00ddff,#00c6f2);transition:background .25s}
+.card{width:460px;background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.05),0 1px 2px rgba(0,0,0,.04)}
+.header{padding:26px 30px 18px;border-bottom:1px solid #f1f1f1}
+.header h2{margin:0;display:flex;align-items:center;gap:12px;font-size:28px}
+.nav-logo{display:block}
+.item{display:flex;justify-content:space-between;align-items:center;padding:16px 30px;cursor:pointer;transition:.18s}
+.item:hover{background:#fafafa}
+.left{display:flex;align-items:center;gap:16px}
+.check{width:18px;color:#999;font-weight:300}
+.dot{width:22px;height:22px;border-radius:50%}
+.name{width:90px}
+.code{font-family:monospace;color:#8a8f98}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+<div class="header">
+<h2><img id="themeLogo" class="nav-logo" src="img/logo_blue.png" width="50" height="50">Theme</h2>
+</div>
+<div id="list"></div>
+</div>
+
+<script>
+const themes=[
+["blue","Blue","#00d2ff","#00ddff","#00c6f2"],
+["teal","Teal","#00d2cc","#1addd7","#00c2bc"],
+["green","Green","#00d200","#11de11","#00c200"],
+["yellow","Yellow","#ffc200","#ffd11a","#f2b800"],
+["orange","Orange","#ffa211","#ffb32c","#f29400"],
+["red","Red","#ff7266","#ff8479","#f26659"],
+["pink","Pink","#ff72bb","#ff86c6","#f264ae"],
+["purple","Purple","#bb92ff","#c8a5ff","#af84f2"],
+["brown","Brown","#cca299","#d7b1a9","#c0948b"],
+["slate","Slate","#aab2bb","#b8c0c8","#9da6af"]
+];
+
+const list=document.getElementById("list");
+const logo=document.getElementById("themeLogo");
+let active=0;
+
+function render(){
+list.innerHTML="";
+
+themes.forEach((t,i)=>{
+const d=document.createElement("div");
+d.className="item";
+
+d.innerHTML=`
+<div class="left">
+<div class="check">${i===active?"✓":""}</div>
+<div class="dot" style="background:${t[2]}"></div>
+<div class="name">${t[1]}</div>
+</div>
+<div class="code">${t[2].toUpperCase()}</div>
+`;
+
+d.onclick=()=>{
+active=i;
+document.body.style.background=`linear-gradient(180deg,${t[3]},${t[4]})`;
+logo.src=`img/logo_${t[0]}.png`;
+render();
+};
+
+list.appendChild(d);
+});
+}
+
+render();
+</script>
+
+</body>
+</html>
