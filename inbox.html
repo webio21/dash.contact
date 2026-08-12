@@ -33,15 +33,142 @@
       <img class="nav-icon" src="img/nav_card.png"><span class="nav-text">Card</span></a>
   </div>
 
-  <div class="nav-right">
-    <a href="login" class="nav-btn btn-a">Log in</a>
-    <a href="signup" class="nav-btn btn-b">Sign up</a>
-    <div id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
+<div class="nav-right">
+  <!-- Notifications -->
+  <button class="nav-notifications" aria-label="Notifications">
+    <img src="img/nav_notifications.png" alt="">
+    <span class="notification-dot"></span>
+  </button>
+
+  <!-- Upgrade -->
+  <a href="upgrade" class="nav-upgrade">
+    ✨Upgrade
+  </a>
+
+  <!-- Avatar -->
+  <div class="avatar-wrapper">
+    <button class="avatar-button" id="avatar-button" aria-label="Account menu">
+      <span class="avatar-status"></span>
+      <img src="img/avatar.png" class="avatar-image" alt="Avatar">
+    </button>
+    <!-- Avatar Menu -->
+    <div class="avatar-menu" id="avatar-menu">
+      <!-- Profile -->
+      <div class="avatar-menu-profile">
+        <div class="profile-avatar-wrap">
+          <img src="img/avatar.png" class="profile-avatar" alt="Avatar">
+          <span class="profile-status"></span>
+        </div>
+        <div class="profile-info">
+          <div class="profile-name-row">
+            <span class="profile-name editable-name" tabindex="0">
+              Display name
+            </span>
+          </div>
+          <button class="profile-email" type="button">
+            username@livemail.me
+          </button>
+        </div>
+      </div>
+
+      <!-- Availability -->
+      <div class="availability-row">
+
+        <span class="availability-label">
+          Availability
+        </span>
+
+        <button class="availability-button" type="button">
+          <span class="availability-indicator status-on"></span>
+          <span>ON</span>
+          <span class="availability-chevron">⌄</span>
+        </button>
+
+        <div class="availability-menu">
+          <button data-status="on">
+            <span class="availability-indicator status-on"></span>
+            ON
+          </button>
+          <button data-status="away">
+            <span class="availability-indicator status-away"></span>
+            Away
+          </button>
+          <button data-status="busy">
+            <span class="availability-indicator status-busy"></span>
+            Busy
+          </button>
+          <button data-status="dnd">
+            <span class="availability-indicator status-dnd"></span>
+            DND
+          </button>
+          <button data-status="off">
+            <span class="availability-indicator status-off"></span>
+            OFF
+          </button>
+        </div>
+      </div>
+
+      <div class="avatar-menu-divider"></div>
+
+      <!-- Main actions -->
+      <a href="upgrade" class="avatar-menu-item upgrade-item">
+        <img src="img/menu_upgrade.png" class="avatar-menu-icon">
+        <span>Upgrade</span>
+      </a>
+
+      <a href="invite" class="avatar-menu-item">
+        <img src="img/menu_invite.png" class="avatar-menu-icon">
+        <span>Invite</span>
+      </a>
+
+      <div class="avatar-menu-divider"></div>
+
+      <a href="settings" class="avatar-menu-item">
+        <img src="img/menu_settings.png" class="avatar-menu-icon">
+        <span>Settings</span>
+      </a>
+
+      <div class="avatar-menu-divider"></div>
+
+      <a href="feedback" class="avatar-menu-item">
+        <img src="img/menu_feedback.png" class="avatar-menu-icon">
+        <span>Feedback</span>
+      </a>
+
+      <a href="help" class="avatar-menu-item">
+        <img src="img/menu_help.png" class="avatar-menu-icon">
+        <span>Help</span>
+      </a>
+
+      <div class="avatar-menu-divider"></div>
+
+      <a href="privacy" class="avatar-menu-item">
+        <img src="img/menu_privacy.png" class="avatar-menu-icon">
+        <span>Privacy</span>
+      </a>
+
+      <a href="terms" class="avatar-menu-item">
+        <img src="img/menu_terms.png" class="avatar-menu-icon">
+        <span>Terms</span>
+      </a>
+
+      <div class="avatar-menu-divider"></div>
+
+      <a href="logout" class="avatar-menu-item logout-item">
+        <img src="img/menu_logout.png" class="avatar-menu-icon">
+        <span>Log out</span>
+      </a>
     </div>
   </div>
+
+  <!-- Mobile hamburger -->
+  <div id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+</div>
 </header>
 
 <!-- Mobile Menu -->

@@ -29,22 +29,33 @@ document.addEventListener('DOMContentLoaded', () => {
   ========================= */
   const logo = document.querySelector('.nav-logo');
 
+  let currentTheme = "blue";
+
+  const getLogoNormal = () => `img/logo_${currentTheme}.png`;
+  const getLogoFlash = () => `img/logo_${currentTheme}2.png`;
+
   if (logo?.dataset.animate === "true") {
-    const normal = "img/logo.png";
-    const flash = "img/logo2.png";
+
+    logo.src = getLogoNormal();
 
     const flashLogo = () => {
-      logo.src = flash;
+
+      logo.src = getLogoFlash();
+
       setTimeout(() => {
-        logo.src = normal;
+
+        logo.src = getLogoNormal();
 
         const nextBlink = 3500 + Math.random() * 2500;
 
         setTimeout(flashLogo, nextBlink);
+
       }, 120);
+
     };
 
     setTimeout(flashLogo, 100);
+
   }
 
   /* =========================
@@ -429,5 +440,154 @@ document.addEventListener("DOMContentLoaded",()=>{
     }
 
   });
+
+});
+
+
+/* =========================
+   AVATAR MENU
+========================= */
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  const avatarButton = document.getElementById('avatar-button');
+  const avatarMenu = document.getElementById('avatar-menu');
+
+  if (!avatarButton || !avatarMenu) return;
+
+  const availabilityRow =
+    avatarMenu.querySelector('.availability-row');
+
+  const availabilityButton =
+    avatarMenu.querySelector('.availability-button');
+
+  const availabilityMenu =
+    avatarMenu.querySelector('.availability-menu');
+
+  /* Toggle menu */
+
+  avatarButton.addEventListener('click', (e) => {
+    e.stopPropagation();
+
+    avatarMenu.classList.toggle('active');
+    availabilityRow.classList.remove('open');
+
+  });
+
+  /* Close when clicking outside */
+
+  document.addEventListener('click', (e) => {
+
+    if (
+      !availabilityMenu.contains(e.target) &&
+      !availabilityButton.contains(e.target)
+    ) {
+      availabilityRow.classList.remove('open');
+    }
+
+    if (
+      !avatarMenu.contains(e.target) &&
+      !avatarButton.contains(e.target)
+    ) {
+      avatarMenu.classList.remove('active');
+      availabilityRow.classList.remove('open');
+    }
+
+  });
+
+
+  /* =========================
+     AVAILABILITY
+  ========================= */
+
+  if (availabilityButton && availabilityMenu) {
+
+    availabilityButton.addEventListener('click', (e) => {
+
+      e.stopPropagation();
+
+      availabilityRow.classList.toggle('open');
+
+    });
+
+
+    availabilityMenu
+      .querySelectorAll('button')
+      .forEach(button => {
+
+        button.addEventListener('click', () => {
+
+          const status =
+            button.dataset.status;
+
+          const text =
+            button.textContent.trim();
+
+          const indicator =
+            button.querySelector('.availability-indicator');
+
+          const currentIndicator =
+            availabilityButton.querySelector(
+              '.availability-indicator'
+            );
+
+          availabilityButton
+            .querySelector('span:nth-child(2)')
+            .textContent =
+              text;
+
+          currentIndicator.className =
+            'availability-indicator ' +
+            indicator.classList[1];
+
+          availabilityRow.classList.remove('open');
+
+        });
+
+      });
+
+  }
+
+
+  /* =========================
+     COPY EMAIL
+  ========================= */
+
+  const emailButton =
+    avatarMenu.querySelector('.profile-email');
+
+  if (emailButton) {
+
+    emailButton.addEventListener('click', async () => {
+
+      const email =
+        emailButton.textContent.trim();
+
+      try {
+
+        await navigator.clipboard.writeText(email);
+
+        const original =
+          emailButton.textContent;
+
+        emailButton.textContent =
+          'Copied';
+
+        setTimeout(() => {
+          emailButton.textContent = original;
+        }, 1200);
+
+      } catch (error) {
+
+        console.error(
+          'Failed to copy email:',
+          error
+        );
+
+      }
+
+    });
+
+  }
 
 });
