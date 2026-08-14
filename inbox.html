@@ -20,17 +20,37 @@
   <div id="desktop-nav" class="nav-center">
     <div class="nav-indicator"></div>
     <a class="nav-link" data-section="inbox" href="inbox.html">
-      <img class="nav-icon" src="img/nav_inbox.png"><span class="nav-text">Inbox</span></a>
+    <span class="nav-icon-wrap">
+      <img class="nav-icon" src="img/nav_inbox.png"><span class="notification-dot"></span>
+    </span>
+    <span class="nav-text">Inbox</span>
+    </a>
     <a class="nav-link" data-section="contacts" href="contacts.html">
-      <img class="nav-icon" src="img/nav_contacts.png"><span class="nav-text">Contacts</span></a>
+    <span class="nav-icon-wrap">
+      <img class="nav-icon" src="img/nav_contacts.png"><span class="notification-dot"></span>
+    </span>
+      <span class="nav-text">Contacts</span>
+    </a>
     <a class="nav-link" data-section="meetings" href="../meetings">
-      <img class="nav-icon" src="img/nav_meetings.png"><span class="nav-text">Meetings</span></a>
+      <img class="nav-icon" src="img/nav_meetings.png">
+      <span class="nav-text">Meetings</span>
+    </a>
     <a class="nav-link" data-section="answer" href="../answer">
-      <img class="nav-icon" src="img/nav_answer.png"><span class="nav-text">Answer</span></a>
+    <span class="nav-icon-wrap">
+      <img class="nav-icon" src="img/nav_answer.png"><span class="notification-dot"></span>
+    </span>
+      <span class="nav-text">Answer</span>
+    </a>
     <a class="nav-link" data-section="deals" href="../deals">
-      <img class="nav-icon" src="img/nav_deals.png"><span class="nav-text">Deals</span></a>
+      <img class="nav-icon" src="img/nav_deals.png">
+      <span class="nav-text">Deals</span>
+    </a>
     <a class="nav-link" data-section="card" href="../card">
-      <img class="nav-icon" src="img/nav_card.png"><span class="nav-text">Card</span></a>
+    <span class="nav-icon-wrap">
+      <img class="nav-icon" src="img/nav_card.png"><span class="notification-dot"></span>
+    </span>
+      <span class="nav-text">Card</span>
+    </a>
   </div>
 
 <div class="nav-right">
@@ -42,7 +62,7 @@
 
   <!-- Upgrade -->
   <a href="upgrade" class="nav-upgrade">
-    ✨Upgrade
+    ✨ Upgrade
   </a>
 
   <!-- Avatar -->
@@ -58,6 +78,7 @@
         <div class="profile-avatar-wrap">
           <img src="img/avatar.png" class="profile-avatar" alt="Avatar">
           <span class="profile-status"></span>
+          <span class="avatar-edit">+</span>
         </div>
         <div class="profile-info">
           <div class="profile-name-row">
@@ -111,7 +132,14 @@
       <div class="avatar-menu-divider"></div>
 
       <!-- Main actions -->
-      <a href="upgrade" class="avatar-menu-item upgrade-item">
+      <a href="settings" class="avatar-menu-item">
+        <img src="img/menu_settings.png" class="avatar-menu-icon">
+        <span>Settings</span>
+      </a>
+
+      <div class="avatar-menu-divider"></div>
+
+      <a href="upgrade" class="avatar-menu-item">
         <img src="img/menu_upgrade.png" class="avatar-menu-icon">
         <span>Upgrade</span>
       </a>
@@ -119,13 +147,6 @@
       <a href="invite" class="avatar-menu-item">
         <img src="img/menu_invite.png" class="avatar-menu-icon">
         <span>Invite</span>
-      </a>
-
-      <div class="avatar-menu-divider"></div>
-
-      <a href="settings" class="avatar-menu-item">
-        <img src="img/menu_settings.png" class="avatar-menu-icon">
-        <span>Settings</span>
       </a>
 
       <div class="avatar-menu-divider"></div>
@@ -173,12 +194,38 @@
 
 <!-- Mobile Menu -->
 <div id="mobile-menu">
-  <a class="nav-link" data-section="inbox" href="../inbox"><img class="nav-icon" src="img/nav_inbox.png"><span class="nav-text">Inbox</span></a>
-  <a class="nav-link" data-section="contacts" href="../contacts"><img class="nav-icon" src="img/nav_contacts.png"><span class="nav-text">Contacts</span></a>
-  <a class="nav-link" data-section="meetings" href="../meetings"><img class="nav-icon" src="img/nav_meetings.png"><span class="nav-text">Meetings</span></a>
-  <a class="nav-link" data-section="answer" href="../answer"><img class="nav-icon" src="img/nav_answer.png"><span class="nav-text">Answer</span></a>
-  <a class="nav-link" data-section="deals" href="../deals"><img class="nav-icon" src="img/nav_deals.png"><span class="nav-text">Deals</span></a>
-  <a class="nav-link" data-section="card" href="../card"><img class="nav-icon" src="img/nav_card.png"><span class="nav-text">Card</span></a>
+  <a class="nav-link" data-section="inbox" href="../inbox">
+    <span class="nav-icon-wrap">
+    <img class="nav-icon" src="img/nav_inbox.png"><span class="notification-dot"></span>
+    </span>
+    <span class="nav-text">Inbox</span>
+  </a>
+  <a class="nav-link" data-section="contacts" href="../contacts">
+    <span class="nav-icon-wrap">
+    <img class="nav-icon" src="img/nav_contacts.png"><span class="notification-dot"></span>
+    </span>
+    <span class="nav-text">Contacts</span>
+  </a>
+  <a class="nav-link" data-section="meetings" href="../meetings">
+    <img class="nav-icon" src="img/nav_meetings.png">
+    <span class="nav-text">Meetings</span>
+  </a>
+  <a class="nav-link" data-section="answer" href="../answer">
+    <span class="nav-icon-wrap">
+    <img class="nav-icon" src="img/nav_answer.png"><span class="notification-dot"></span>
+    </span>
+    <span class="nav-text">Answer</span>
+  </a>
+  <a class="nav-link" data-section="deals" href="../deals">
+    <img class="nav-icon" src="img/nav_deals.png">
+    <span class="nav-text">Deals</span>
+  </a>
+  <a class="nav-link" data-section="card" href="../card">
+    <span class="nav-icon-wrap">
+    <img class="nav-icon" src="img/nav_card.png"><span class="notification-dot"></span>
+    </span>
+    <span class="nav-text">Card</span>
+  </a>
 </div>
 
 <!-- Inbox Section -->
