@@ -464,6 +464,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const availabilityMenu =
     avatarMenu.querySelector('.availability-menu');
 
+  const profileStatus =
+    avatarMenu.querySelector('.profile-status');
+
+  const avatarStatus =
+    document.querySelector('.avatar-status');
+
   /* Toggle menu */
 
   avatarButton.addEventListener('click', (e) => {
@@ -538,6 +544,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
           currentIndicator.className =
             'availability-indicator ' +
+            indicator.classList[1];
+
+          profileStatus.className =
+            'profile-status ' +
+            indicator.classList[1];
+
+          avatarStatus.className =
+            'avatar-status ' +
             indicator.classList[1];
 
           availabilityRow.classList.remove('open');
