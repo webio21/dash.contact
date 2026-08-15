@@ -1769,7 +1769,7 @@ display: flex;
 }
 
 .profile-name:focus {
-  background: #d5f7ff;
+  background: #dff9ff;
   border-radius: 7px;
 }
 
@@ -1824,7 +1824,7 @@ display: flex;
 }
 
 .availability-button:hover {
-  background: #effcff;
+  background: #dff9ff;
 }
 
 .availability-chevron {
