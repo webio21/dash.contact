@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Icon Asset Reference</title>
+
+<style>
+    *{
+        box-sizing:border-box;
+    }
+
+    body{
+        margin:0;
+        padding:40px;
+        font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background:#f7f8fa;
+        color:#222;
+    }
+
+    .container{
+        max-width:1200px;
+        margin:0 auto;
+    }
+
+    h1{
+        margin:0 0 8px;
+        font-size:28px;
+        font-weight:700;
+    }
+
+    .subtitle{
+        margin:0 0 40px;
+        color:#777;
+        font-size:14px;
+    }
+
+    .section{
+        margin-bottom:48px;
+    }
+
+    .section-header{
+        margin-bottom:18px;
+    }
+
+    .section-title{
+        margin:0 0 5px;
+        font-size:20px;
+        font-weight:700;
+    }
+
+    .section-path{
+        font-size:13px;
+        color:#888;
+        font-family:monospace;
+    }
+
+    .section-description{
+        margin-top:8px;
+        font-size:13px;
+        color:#666;
+    }
+
+    .icon-grid{
+        display:grid;
+        grid-template-columns:repeat(auto-fill,minmax(170px,1fr));
+        gap:14px;
+    }
+
+    .icon-card{
+        background:#fff;
+        border:1px solid #e5e7eb;
+        border-radius:12px;
+        padding:16px;
+        min-height:180px;
+    }
+
+    .preview{
+        width:100px;
+        height:100px;
+        margin:0 auto 14px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        border-radius:10px;
+        background:#f2f2f2;
+    }
+
+    .preview img{
+        width:100px;
+        height:100px;
+        object-fit:contain;
+        display:block;
+    }
+
+    .filename{
+        font-size:12px;
+        font-family:monospace;
+        color:#333;
+        word-break:break-all;
+        line-height:1.5;
+        text-align:center;
+    }
+
+    .usage{
+        margin-top:5px;
+        font-size:11px;
+        color:#999;
+        text-align:center;
+        line-height:1.4;
+    }
+
+    .badge{
+        display:inline-block;
+        margin-top:8px;
+        padding:3px 7px;
+        border-radius:5px;
+        background:#f0f1f3;
+        color:#666;
+        font-size:10px;
+        font-weight:600;
+    }
+
+    .badge.dark{
+        background:#222;
+        color:#fff;
+    }
+
+    .badge.theme{
+        background:#eef6ff;
+        color:#2774c7;
+    }
+
+    .theme-grid{
+        display:grid;
+        grid-template-columns:repeat(auto-fill,minmax(170px,1fr));
+        gap:14px;
+    }
+
+    .theme-card{
+        background:#fff;
+        border:1px solid #e5e7eb;
+        border-radius:12px;
+        padding:16px;
+        text-align:center;
+    }
+
+    .theme-preview{
+        width:100px;
+        height:100px;
+        margin:0 auto 14px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        background:#fafafa;
+        border-radius:10px;
+    }
+
+    .theme-preview img{
+        width:100px;
+        height:100px;
+        object-fit:contain;
+    }
+
+    .theme-name{
+        font-size:13px;
+        font-weight:600;
+        margin-bottom:5px;
+    }
+
+    .theme-file{
+        font-size:11px;
+        font-family:monospace;
+        color:#888;
+        word-break:break-all;
+    }
+
+    .note{
+        margin-top:12px;
+        padding:14px 16px;
+        background:#fff;
+        border:1px solid #e5e7eb;
+        border-radius:10px;
+        font-size:12px;
+        line-height:1.6;
+        color:#666;
+    }
+
+    @media(max-width:600px){
+        body{
+            padding:24px 16px;
+        }
+
+        .icon-grid,
+        .theme-grid{
+            grid-template-columns:repeat(2,1fr);
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Contact — Icon Asset Reference</h1>
+    <p class="subtitle">
+        Frontend icon reference · All previews are displayed at 100 × 100 px
+    </p>
+
+
+    <!-- =========================================================
+         LIVEMAIL SETTINGS
+    ========================================================== -->
+
+    <section class="section">
+
+        <div class="section-header">
+            <h2 class="section-title">LiveMail</h2>
+            <div class="section-path">dash.contact/settings/livemail</div>
+            <div class="section-description">
+                Icons used for the LiveMail settings page.
+            </div>
+        </div>
+
+        <div class="icon-grid">
+
+            <div class="icon-card">
+                <div class="preview">
+                    <img src="email_livemail.png" alt="email_livemail.png">
+                </div>
+                <div class="filename">email_livemail.png</div>
+                <div class="usage">LiveMail email icon</div>
+                <span class="badge">Light</span>
+            </div>
+
+            <div class="icon-card">
+                <div class="preview">
+                    <img src="email_livemail_dark.png" alt="email_livemail_dark.png">
+                </div>
+                <div class="filename">email_livemail_dark.png</div>
+                <div class="usage">LiveMail email icon</div>
+                <span class="badge dark">Dark</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         INTEGRATIONS
+    ========================================================== -->
+
+    <section class="section">
+
+        <div class="section-header">
+            <h2 class="section-title">Integrations</h2>
+            <div class="section-path">dash.contact/settings/integrations</div>
+            <div class="section-description">
+                Email and calendar provider icons used on the integrations page.
+            </div>
+        </div>
+
+        <div class="icon-grid">
+
+            <div class="icon-card">
+                <div class="preview">
+                    <img src="email_gmail.png" alt="email_gmail.png">
+                </div>
+                <div class="filename">email_gmail.png</div>
+                <div class="usage">Gmail integration</div>
+            </div>
+
+            <div class="icon-card">
+                <div class="preview">
+                    <img src="email_outlook.png" alt="email_outlook.png">
+                </div>
+                <div class="filename">email_outlook.png</div>
+                <div class="usage">Outlook email integration</div>
+            </div>
+
+            <div class="icon-card">
+                <div class="preview">
+                    <img src="calendar_google.png" alt="calendar_google.png">
+                </div>
+                <div class="filename">calendar_google.png</div>
+                <div class="usage">Google Calendar integration</div>
+            </div>
+
+            <div class="icon-card">
+                <div class="preview">
+                    <img src="calendar_outlook.png" alt="calendar_outlook.png">
+                </div>
+                <div class="filename">calendar_outlook.png</div>
+                <div class="usage">Outlook Calendar integration</div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         INBOX — SOURCE / MESSAGE TYPE
+    ========================================================== -->
+
+    <section class="section">
+
+        <div class="section-header">
+            <h2 class="section-title">Inbox — Email / Message Type</h2>
+            <div class="section-path">dash.contact/inbox</div>
+            <div class="section-description">
+                Icons representing the source or type of each email/message in the Inbox.
+            </div>
+        </div>
+
+        <div class="icon-grid">
+
+            <div class="icon-card">
+                <div class="preview">
+                    <img src="email_livemail.png" alt="email_livemail.png">
+                </div>
+                <div class="filename">email_livemail.png</div>
+                <div class="usage">LiveMail email</div>
+                <span class="badge">Light</span>
+            </div>
+
+            <div class="icon-card">
+                <div class="preview">
+                    <img src="email_livemail_dark.png" alt="email_livemail_dark.png">
+                </div>
+                <div class="filename">email_livemail_dark.png</div>
+                <div class="usage">LiveMail email</div>
+                <span class="badge dark">Dark</span>
+            </div>
+
+            <div class="icon-card">
+                <div class="preview">
+                    <img src="email_gmail.png" alt="email_gmail.png">
+                </div>
+                <div class="filename">email_gmail.png</div>
+                <div class="usage">Gmail email</div>
+            </div>
+
+            <div class="icon-card">
+                <div class="preview">
+                    <img src="email_outlook.png" alt="email_outlook.png">
+                </div>
+                <div class="filename">email_outlook.png</div>
+                <div class="usage">Outlook email</div>
+            </div>
+
+            <div class="icon-card">
+                <div class="preview">
+                    <img src="email_other.png" alt="email_other.png">
+                </div>
+                <div class="filename">email_other.png</div>
+                <div class="usage">Other email provider</div>
+                <span class="badge">Light</span>
+            </div>
+
+            <div class="icon-card">
+                <div class="preview">
+                    <img src="email_other_dark.png" alt="email_other_dark.png">
+                </div>
+                <div class="filename">email_other_dark.png</div>
+                <div class="usage">Other email provider</div>
+                <span class="badge dark">Dark</span>
+            </div>
+
+            <div class="icon-card">
+                <div class="preview">
+                    <img src="message_contact.png" alt="message_contact.png">
+                </div>
+                <div class="filename">message_contact.png</div>
+                <div class="usage">Contact message</div>
+                <span class="badge">Light</span>
+            </div>
+
+            <div class="icon-card">
+                <div class="preview">
+                    <img src="message_contact_dark.png" alt="message_contact_dark.png">
+                </div>
+                <div class="filename">message_contact_dark.png</div>
+                <div class="usage">Contact message</div>
+                <span class="badge dark">Dark</span>
+            </div>
+
+            <div class="icon-card">
+                <div class="preview">
+                    <img src="message_livechat.png" alt="message_livechat.png">
+                </div>
+                <div class="filename">message_livechat.png</div>
+                <div class="usage">LiveChat message</div>
+                <span class="badge">Light</span>
+            </div>
+
+            <div class="icon-card">
+                <div class="preview">
+                    <img src="message_livechat_dark.png" alt="message_livechat_dark.png">
+                </div>
+                <div class="filename">message_livechat_dark.png</div>
+                <div class="usage">LiveChat message</div>
+                <span class="badge dark">Dark</span>
+            </div>
+
+            <div class="icon-card">
+                <div class="preview">
+                    <img src="auto-send.png" alt="auto-send.png">
+                </div>
+                <div class="filename">auto-send.png</div>
+                <div class="usage">Auto-send message</div>
+                <span class="badge">Light</span>
+            </div>
+
+            <div class="icon-card">
+                <div class="preview">
+                    <img src="auto-send_dark.png" alt="auto-send_dark.png">
+                </div>
+                <div class="filename">auto-send_dark.png</div>
+                <div class="usage">Auto-send message</div>
+                <span class="badge dark">Dark</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         EMAIL / MESSAGE COMPOSER
+    ========================================================== -->
+
+    <section class="section">
+
+        <div class="section-header">
+            <h2 class="section-title">Email / Message Composer</h2>
+            <div class="section-path">Email / Message editing page</div>
+            <div class="section-description">
+                Action icons used in the email and message editor toolbar.
+            </div>
+        </div>
+
+        <div class="icon-grid">
+
+            <div class="icon-card">
+                <div class="preview">
+                    <img src="image.png" alt="image.png">
+                </div>
+                <div class="filename">image.png</div>
+                <div class="usage">Insert image</div>
+                <span class="badge">Light</span>
+            </div>
+
+            <div class="icon-card">
+                <div class="preview">
+                    <img src="image_dark.png" alt="image_dark.png">
+                </div>
+                <div class="filename">image_dark.png</div>
+                <div class="usage">Insert image</div>
+                <span class="badge dark">Dark</span>
+            </div>
+
+            <div class="icon-card">
+                <div class="preview">
+                    <img src="attachment.png" alt="attachment.png">
+                </div>
+                <div class="filename">attachment.png</div>
+                <div class="usage">Add attachment</div>
+                <span class="badge">Light</span>
+            </div>
+
+            <div class="icon-card">
+                <div class="preview">
+                    <img src="attachment_dark.png" alt="attachment_dark.png">
+                </div>
+                <div class="filename">attachment_dark.png</div>
+                <div class="usage">Add attachment</div>
+                <span class="badge dark">Dark</span>
+            </div>
+
+            <div class="icon-card">
+                <div class="preview">
+                    <img src="link.png" alt="link.png">
+                </div>
+                <div class="filename">link.png</div>
+                <div class="usage">Insert link</div>
+                <span class="badge">Light</span>
+            </div>
+
+            <div class="icon-card">
+                <div class="preview">
+                    <img src="link_dark.png" alt="link_dark.png">
+                </div>
+                <div class="filename">link_dark.png</div>
+                <div class="usage">Insert link</div>
+                <span class="badge dark">Dark</span>
+            </div>
+
+            <div class="icon-card">
+                <div class="preview">
+                    <img src="translate.png" alt="translate.png">
+                </div>
+                <div class="filename">translate.png</div>
+                <div class="usage">Translate</div>
+                <span class="badge">Light</span>
+            </div>
+
+            <div class="icon-card">
+                <div class="preview">
+                    <img src="translate_dark.png" alt="translate_dark.png">
+                </div>
+                <div class="filename">translate_dark.png</div>
+                <div class="usage">Translate</div>
+                <span class="badge dark">Dark</span>
+            </div>
+
+            <div class="icon-card">
+                <div class="preview">
+                    <img src="emoji.png" alt="emoji.png">
+                </div>
+                <div class="filename">emoji.png</div>
+                <div class="usage">Emoji picker</div>
+                <span class="badge">Light</span>
+            </div>
+
+            <div class="icon-card">
+                <div class="preview">
+                    <img src="emoji_dark.png" alt="emoji_dark.png">
+                </div>
+                <div class="filename">emoji_dark.png</div>
+                <div class="usage">Emoji picker</div>
+                <span class="badge dark">Dark</span>
+            </div>
+
+            <div class="icon-card">
+                <div class="preview">
+                    <img src="send.png" alt="send.png">
+                </div>
+                <div class="filename">send.png</div>
+                <div class="usage">Send message/email</div>
+                <span class="badge">Light</span>
+            </div>
+
+            <div class="icon-card">
+                <div class="preview">
+                    <img src="send_dark.png" alt="send_dark.png">
+                </div>
+                <div class="filename">send_dark.png</div>
+                <div class="usage">Send message/email</div>
+                <span class="badge dark">Dark</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         DRAFT
+    ========================================================== -->
+
+    <section class="section">
+
+        <div class="section-header">
+            <h2 class="section-title">Draft</h2>
+            <div class="section-path">Email / Message editing</div>
+            <div class="section-description">
+                Icon used for editing a saved draft.
+            </div>
+        </div>
+
+        <div class="icon-grid">
+
+            <div class="icon-card">
+                <div class="preview">
+                    <img src="edit.png" alt="edit.png">
+                </div>
+                <div class="filename">edit.png</div>
+                <div class="usage">Edit draft</div>
+                <span class="badge">Light</span>
+            </div>
+
+            <div class="icon-card">
+                <div class="preview">
+                    <img src="edit_dark.png" alt="edit_dark.png">
+                </div>
+                <div class="filename">edit_dark.png</div>
+                <div class="usage">Edit draft</div>
+                <span class="badge dark">Dark</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         STARRED
+    ========================================================== -->
+
+    <section class="section">
+
+        <div class="section-header">
+            <h2 class="section-title">Starred</h2>
+            <div class="section-path">Theme-dependent Starred icons</div>
+            <div class="section-description">
+                The starred icon changes according to the currently selected theme.
+            </div>
+        </div>
+
+        <div class="theme-grid">
+
+            <div class="theme-card">
+                <div class="theme-preview">
+                    <img src="not_starred.png" alt="not_starred.png">
+                </div>
+                <div class="theme-name">Not Starred</div>
+                <div class="theme-file">not_starred.png</div>
+            </div>
+
+            <div class="theme-card">
+                <div class="theme-preview">
+                    <img src="not_starred_dark.png" alt="not_starred_dark.png">
+                </div>
+                <div class="theme-name">Not Starred</div>
+                <div class="theme-file">not_starred_dark.png</div>
+                <span class="badge dark">Dark</span>
+            </div>
+
+            <div class="theme-card">
+                <div class="theme-preview">
+                    <img src="starred_blue.png" alt="starred_blue.png">
+                </div>
+                <div class="theme-name">Blue</div>
+                <div class="theme-file">starred_blue.png</div>
+                <span class="badge theme">Theme</span>
+            </div>
+
+            <div class="theme-card">
+                <div class="theme-preview">
+                    <img src="starred_teal.png" alt="starred_teal.png">
+                </div>
+                <div class="theme-name">Teal</div>
+                <div class="theme-file">starred_teal.png</div>
+                <span class="badge theme">Theme</span>
+            </div>
+
+            <div class="theme-card">
+                <div class="theme-preview">
+                    <img src="starred_green.png" alt="starred_green.png">
+                </div>
+                <div class="theme-name">Green</div>
+                <div class="theme-file">starred_green.png</div>
+                <span class="badge theme">Theme</span>
+            </div>
+
+            <div class="theme-card">
+                <div class="theme-preview">
+                    <img src="starred_yellow.png" alt="starred_yellow.png">
+                </div>
+                <div class="theme-name">Yellow</div>
+                <div class="theme-file">starred_yellow.png</div>
+                <span class="badge theme">Theme</span>
+            </div>
+
+            <div class="theme-card">
+                <div class="theme-preview">
+                    <img src="starred_orange.png" alt="starred_orange.png">
+                </div>
+                <div class="theme-name">Orange</div>
+                <div class="theme-file">starred_orange.png</div>
+                <span class="badge theme">Theme</span>
+            </div>
+
+            <div class="theme-card">
+                <div class="theme-preview">
+                    <img src="starred_red.png" alt="starred_red.png">
+                </div>
+                <div class="theme-name">Red</div>
+                <div class="theme-file">starred_red.png</div>
+                <span class="badge theme">Theme</span>
+            </div>
+
+            <div class="theme-card">
+                <div class="theme-preview">
+                    <img src="starred_pink.png" alt="starred_pink.png">
+                </div>
+                <div class="theme-name">Pink</div>
+                <div class="theme-file">starred_pink.png</div>
+                <span class="badge theme">Theme</span>
+            </div>
+
+            <div class="theme-card">
+                <div class="theme-preview">
+                    <img src="starred_purple.png" alt="starred_purple.png">
+                </div>
+                <div class="theme-name">Purple</div>
+                <div class="theme-file">starred_purple.png</div>
+                <span class="badge theme">Theme</span>
+            </div>
+
+            <div class="theme-card">
+                <div class="theme-preview">
+                    <img src="starred_brown.png" alt="starred_brown.png">
+                </div>
+                <div class="theme-name">Brown</div>
+                <div class="theme-file">starred_brown.png</div>
+                <span class="badge theme">Theme</span>
+            </div>
+
+            <div class="theme-card">
+                <div class="theme-preview">
+                    <img src="starred_slate.png" alt="starred_slate.png">
+                </div>
+                <div class="theme-name">Slate</div>
+                <div class="theme-file">starred_slate.png</div>
+                <span class="badge theme">Theme</span>
+            </div>
+
+        </div>
+
+        <div class="note">
+            <strong>Theme behavior:</strong>
+            starred_blue.png, starred_teal.png, starred_green.png,
+            starred_yellow.png, starred_orange.png, starred_red.png,
+            starred_pink.png, starred_purple.png, starred_brown.png
+            and starred_slate.png should be selected according to the
+            active UI theme. The not_starred icon remains independent of
+            the selected theme.
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         QR CODE
+    ========================================================== -->
+
+    <section class="section">
+
+        <div class="section-header">
+            <h2 class="section-title">QR Code</h2>
+            <div class="section-path">QR code display</div>
+            <div class="section-description">
+                QR code icons used wherever QR code sharing or display is required.
+            </div>
+        </div>
+
+        <div class="icon-grid">
+
+            <div class="icon-card">
+                <div class="preview">
+                    <img src="qrcode.png" alt="qrcode.png">
+                </div>
+                <div class="filename">qrcode.png</div>
+                <div class="usage">QR code</div>
+                <span class="badge">Light</span>
+            </div>
+
+            <div class="icon-card">
+                <div class="preview">
+                    <img src="qrcode_dark.png" alt="qrcode_dark.png">
+                </div>
+                <div class="filename">qrcode_dark.png</div>
+                <div class="usage">QR code</div>
+                <span class="badge dark">Dark</span>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =========================================================
+         BOOK A CONVERSATION
+    ========================================================== -->
+
+    <section class="section">
+
+        <div class="section-header">
+            <h2 class="section-title">Book a Conversation</h2>
+            <div class="section-path">dash.contact/inbox</div>
+            <div class="section-description">
+                Booking icons used for scheduling a conversation.
+            </div>
+        </div>
+
+        <div class="icon-grid">
+
+            <div class="icon-card">
+                <div class="preview">
+                    <img src="booking.png" alt="booking.png">
+                </div>
+                <div class="filename">booking.png</div>
+                <div class="usage">Book a Conversation</div>
+                <span class="badge">Light</span>
+            </div>
+
+            <div class="icon-card">
+                <div class="preview">
+                    <img src="booking_dark.png" alt="booking_dark.png">
+                </div>
+                <div class="filename">booking_dark.png</div>
+                <div class="usage">Book a Conversation</div>
+                <span class="badge dark">Dark</span>
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+
+</body>
+</html>
