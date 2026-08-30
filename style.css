@@ -1189,36 +1189,74 @@ th.free .yearly{
   justify-content: center;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1280px) {
   .nav-link {
     flex: 1 1 0;
     padding: 6px 20px;
-    min-width: 80px;
+    min-width: 82px;
   }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   .nav-link {
     flex: 1 1 0;
-    padding: 6px 20px;
-    min-width: 80px;
+    padding: 6px 16px;
+    min-width: 78px;
+  }
+}
+
+@media (max-width: 1140px) {
+  .nav-link {
+    flex: 1 1 0;
+    padding: 6px 12px;
+    min-width: 74px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .nav-link {
+    flex: 1 1 0;
+    padding: 6px 6px;
+    min-width: 68px;
   }
 }
 
 @media (max-width: 1024px) {
   .nav-link {
     flex: 1 1 0;
-    padding: 6px 12px;
-    min-width: 70px;
+    padding: 6px 0px;
+    min-width: 62px;
+  }
+  #desktop-nav .nav-text {
+    font-size: 8pt;
   }
 }
 
-@media (max-width: 900px) {
-  .nav-center {
-    opacity: 0;
-    pointer-events: none;
+@media (max-width: 960px) {
+  #desktop-nav .nav-link {
+    flex: 1 1 0;
+    padding: 6px 0px;
+    min-width: 52px;
   }
+  #desktop-nav .nav-icon {
+    margin-top: 4px;
+  }
+  #desktop-nav .nav-link .notification-dot {
+    margin-top: 4px;
+  }
+  #desktop-nav .nav-text {
+    display: none;
+  }
+}
 
+@media (max-width: 940px) {
+  .nav-center {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  #desktop-nav .nav-link:nth-of-type(8) {
+    display: none;
+  }
   #mobile-menu .nav-link {
     flex: 0 0 auto;
     flex-direction: row;
@@ -1228,9 +1266,39 @@ th.free .yearly{
     height: 56px;
     padding: 0 20px;
   }
-
   #mobile-menu .nav-link .nav-icon {
     margin-bottom: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  #desktop-nav .nav-link:nth-of-type(7) {
+    display: none;
+  }
+}
+
+@media (max-width: 850px) {
+  #desktop-nav .nav-link:nth-of-type(6) {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  #desktop-nav .nav-link:nth-of-type(5) {
+    display: none;
+  }
+}
+
+@media (max-width: 750px) {
+  #desktop-nav {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  #desktop-nav {
+    opacity: 0;
+    pointer-events: none;
   }
 }
 
@@ -1402,8 +1470,9 @@ display: flex;
 #hamburger {
   display: none;
   flex-direction: column;
+  align-items: flex-end;
   cursor: pointer;
-  width: 18px;
+  width: 16px;
   gap: 4px;
   margin-left: 2px;
   margin-right: -4px;
@@ -1411,17 +1480,22 @@ display: flex;
 
 #hamburger span {
   height: 2px;
+  width: 16px;
   background-color: #aaa;
   border-radius: 2px;
   display: block;
 }
 
-#hamburger:hover span {
-  background-color: #00d2ff;
+#hamburger span:nth-child(2) {
+  width: 14px;
 }
 
-#hamburger:active span {
-  transform: scale(.94);
+#hamburger span:nth-child(3) {
+  width: 12px;
+}
+
+#hamburger:hover span {
+  background-color: #00d2ff;
 }
 
 @media (max-width: 900px) {
@@ -1544,7 +1618,7 @@ display: flex;
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: #ff6255;
+  background: #ff5555;
   border: 2px solid #fff;
   box-sizing: content-box;
   opacity: 1 !important;
@@ -1640,7 +1714,7 @@ display: flex;
   width: 9px;
   height: 9px;
   border-radius: 50%;
-  background: #24c86b;
+  background: #00d655;
   border: 2px solid #fff;
   z-index: 2;
 }
@@ -1715,7 +1789,7 @@ display: flex;
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: #24c86b;
+  background: #00d655;
   border: 2px solid #fff;
   z-index: 4;
 }
@@ -1889,7 +1963,7 @@ display: flex;
 }
 
 .status-on {
-  background: #24c86b;
+  background: #00d655;
 }
 
 .status-away {
@@ -1897,7 +1971,7 @@ display: flex;
 }
 
 .status-busy {
-  background: #ff6255;
+  background: #ff5555;
 }
 
 .status-dnd {
@@ -1945,14 +2019,8 @@ display: flex;
 }
 
 .logout-item:hover {
-  color: #ff6255;
+  color: #ff5555;
   background: #fff4f3;
-}
-
-.avatar-menu-divider {
-  height: 1px;
-  margin: 7px 7px;
-  background: rgba(0,0,0,.065);
 }
 
 /* =========================
@@ -1961,7 +2029,13 @@ display: flex;
 .avatar-menu-divider {
   height: 1px;
   margin: 7px 7px;
-  background: rgba(0,0,0,.065);
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 0, 0, .065) 20%,
+    rgba(0, 0, 0, .065) 80%,
+    transparent 100%
+  );
 }
 
 
