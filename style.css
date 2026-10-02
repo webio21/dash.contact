@@ -1,4 +1,4 @@
-:root{
+ :root{
   --text:#555;
   --muted:#777;
   --border:#eeeeee;
@@ -1183,7 +1183,7 @@ th.free .yearly{
   justify-content: center;
   min-width: 82px;
   height: 100%;
-  padding: 6px 22px;
+  padding: 6px 16px;
   text-decoration: none;
   color: #000;
   font-size: 9pt;
@@ -1251,7 +1251,7 @@ th.free .yearly{
 @media (max-width: 1366px) {
   .nav-link {
     flex: 1 1 0;
-    padding: 6px 20px;
+    padding: 6px 14px;
     min-width: 82px;
   }
 }
@@ -1259,7 +1259,7 @@ th.free .yearly{
 @media (max-width: 1333px) {
   .nav-link {
     flex: 1 1 0;
-    padding: 6px 16px;
+    padding: 6px 12px;
     min-width: 78px;
   }
 }
@@ -1267,7 +1267,7 @@ th.free .yearly{
 @media (max-width: 1300px) {
   .nav-link {
     flex: 1 1 0;
-    padding: 6px 12px;
+    padding: 6px 10px;
     min-width: 74px;
   }
 }
@@ -1275,7 +1275,7 @@ th.free .yearly{
 @media (max-width: 1250px) {
   .nav-link {
     flex: 1 1 0;
-    padding: 6px 6px;
+    padding: 6px 8px;
     min-width: 68px;
   }
 }
@@ -1283,7 +1283,7 @@ th.free .yearly{
 @media (max-width: 1200px) {
   .nav-link {
     flex: 1 1 0;
-    padding: 6px 0px;
+    padding: 6px 4px;
     min-width: 62px;
   }
   #desktop-nav .nav-text {
